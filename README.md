@@ -4,22 +4,6 @@
 //https.get(`${API_URL}?api_key=YOURKEYGOESHERE`, res => {
 //The part of the script that updates the desktop background is built for Windows 11, so if you're using a different OS this will likely need some tweaking. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
     .---.                                                      
     |   |                                                      
     '---'      __.....__              __  __   ___             
@@ -33,4 +17,3 @@
  __.'   '    `''-...... -'   | |                               
 |      '                     |_|                               
 |____.'                                                        
-*/
