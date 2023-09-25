@@ -4,7 +4,7 @@ import https from 'https';
 // Importing fs (File System) from node.js' standard library to interact with the file system
 import fs from 'fs';
 
-// Defining the API endpoint to grab the picture of the day from NASA's API
+// Defining the API endpoint to fetch the picture of the day from NASA's API
 const API_URL = "https://api.nasa.gov/planetary/apod";
 
 // Defining the path where the picture of the day will be stored
@@ -12,7 +12,7 @@ const IMAGE_PATH = "picture-of-the-day.jpg";
 
 // Function to fetch the picture of the day from NASA's API
 async function getPictureOfTheDay() {
-  // Creating a new Promise to handle the async nature of the request --> promise allows code to continue before getting response
+  // Creating a new Promise to handle the async nature of the request --> allows code to continue before getting response
   return new Promise((resolve, reject) => {
     // Making a GET request to the NASA API
     https.get(`${API_URL}?api_key=JASdn73RLcHF5fPdXIPx4t55cmizTojKWa8eiVzM`, res => {
@@ -22,7 +22,7 @@ async function getPictureOfTheDay() {
         reject(new Error(`Failed to fetch the picture of the day. Status code: ${res.statusCode}`));
       }
   
-      // Variable to gather the data from the response
+      // Variable to accumulate the data from the response
       let data = "";
       // Event listener for the "data" event to accumulate chunks of data
       res.on("data", chunk => { // read data
@@ -80,7 +80,7 @@ getPictureOfTheDay().then(data => {
 const wallpaperModule = await import('wallpaper');
 console.log(wallpaperModule);
 
-// Check rate limit - this part is a work in progress
+// Check rate limit - not working
 //console.log('Rate Limit:', res.headers['x-ratelimit-limit']);
 //console.log('Rate Limit Remaining:', res.headers['x-ratelimit-remaining']);
 
@@ -95,7 +95,7 @@ console.log(wallpaperModule);
 |   |\    .-------------'| |  | ||  |  |  |  |  |          
 |   | \    '-.____...---.| |  '- |  |  |  |  |  |          
 |   |  `.             .' | |     |__|  |__|  |__|          
-__.'   '    `''-...... -'   | |                               
-|      '                     |_|                               
+__.'   '    `''-...... -'| |                               
+|      '                 |_|                               
 |____.'                                                        
 */
