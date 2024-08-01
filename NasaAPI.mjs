@@ -15,7 +15,7 @@ async function getPictureOfTheDay() {
   // Creating a new Promise to handle the async nature of the request --> allows code to continue before getting response
   return new Promise((resolve, reject) => {
     // Making a GET request to the NASA API
-    https.get(`${API_URL}?api_key=JASdn73RLcHF5fPdXIPx4t55cmizTojKWa8eiVzM`, res => {
+    https.get(`${API_URL}?api_key=YOURKEYGOESHERE`, res => {
       // Checking if the response status code is not 200 (OK)
       if (res.statusCode !== 200) { //response
         // If it's not 200, reject the promise with an error
